@@ -1,1 +1,1 @@
-See [Deploy Cluster Metrics Stack](../../docs/deployment/deployK8sMetricsStack.md) for more information.
+See [Capacity Planning Framework](../../docs/deployment/deployK8sCapacityPlanning.md) for more information.

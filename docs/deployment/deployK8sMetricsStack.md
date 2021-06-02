@@ -9,10 +9,10 @@ This will cover deploying a metrics stack for your kubernetes cluster into the `
 ## Prerequisites and References
 
 You will need:
-* helm
-* envsubst - optional but useful.
-* _cluster admin privileges_
-* knowledge of kubernetes 
+  * helm
+  * envsubst - optional but useful.
+  * _cluster admin privileges_
+  * knowledge of kubernetes 
 
 This work leverages:
 * [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator)
@@ -38,7 +38,7 @@ Add the helm chart repo:
   helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
   ```
 
-The [values.yaml](../../20-kubernetes/20-cluster-metrics-stack/prometheus-operator/values.yaml) used has been slightly modified from the default. You can make any other adjustments as needed, refer to the [prometheus-operator helm chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) for reference. 
+`20-cluster-metrics-stack/prometheus-operator/values.yaml` is slightly modified from the prometheus-operator default `values.yaml`. You can make any other adjustments as needed, refer to the [prometheus-operator helm chart](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) for reference. 
 
 
 Our edits to this yaml include:
