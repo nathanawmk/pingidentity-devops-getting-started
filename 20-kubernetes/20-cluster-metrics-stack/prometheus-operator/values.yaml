@@ -221,7 +221,7 @@ alertmanager:
     ## Hosts must be provided if Ingress is enabled.
     ##
     hosts: 
-      - ${MY_RELEASE_NAME}-alertmanager.ping-devops.com
+      - ${MY_RELEASE_NAME}-alertmanager.${MY_DOMAIN}
 
     ## Paths to use for ingress rules - one path should match the alertmanagerSpec.routePrefix
     ##
@@ -635,7 +635,7 @@ grafana:
     ## Must be provided if Ingress is enable.
     ##
     hosts:
-      - ${MY_RELEASE_NAME}-grafana.ping-devops.com
+      - ${MY_RELEASE_NAME}-grafana.${MY_DOMAIN}
 
     ## Path for grafana ingress
     path: /
@@ -1691,7 +1691,7 @@ prometheus:
     ## Must be provided if Ingress is enabled.
     ##
     hosts:
-      - ${MY_RELEASE_NAME}-prometheus.ping-devops.com
+      - ${MY_RELEASE_NAME}-prometheus.${MY_DOMAIN}
 
     ## Paths to use for ingress rules - one path should match the prometheusSpec.routePrefix
     ##

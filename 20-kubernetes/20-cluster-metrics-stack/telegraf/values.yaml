@@ -1,5 +1,5 @@
 ## Deployed with:
-##  helm upgrade --install telegraf influxdata/telegraf-operator -f /Users/samirgandhi/projects/cluster-metrics-stack/telegraf/values.yaml -n metrics --version 1.1.5
+##  helm upgrade --install telegraf influxdata/telegraf-operator -f telegraf/values.yaml -n metrics --version 1.1.5
 
 replicaCount: 3
 image:
