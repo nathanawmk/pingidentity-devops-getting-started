@@ -127,7 +127,7 @@ nav:
       - Certificates: "reference/usingCertificates.md"
       - Image Info:
           - Release Tags: "reference/releaseTags.md"
-          - Using Supported Images: "reference/imageSupport.md"
+          - Docker Image Support Policy: "reference/imageSupport.md"
           - DevOps Image Security: "reference/dockerImageSecurity.md"
       - Utilities:
           #- ping-devops: "reference/pingDevopsUtil.md"
@@ -161,7 +161,8 @@ nav:
           - Adding a MOTD: "reference/addMOTD.md"
           - Build Local Images: "reference/buildLocal.md"
   - Release Notes:
-      - Current: "release-notes/relnotes-2106.md"
+      - Current: "release-notes/relnotes-2107.md"
+      - Version 2106: "release-notes/relnotes-2106.md"
       - Version 2105: "release-notes/relnotes-2105.md"
       - Version 2104: "release-notes/relnotes-2104.md"
       - Version 2103: "release-notes/relnotes-2103.md"
