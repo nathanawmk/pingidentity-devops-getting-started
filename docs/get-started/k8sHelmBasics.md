@@ -183,7 +183,7 @@ With Helm this entire resource would be automatically defined, just by setting p
 
 **Helm Templates** - Go Template versions of kubernetes yaml files. 
 
-**Values and values.yaml** - the setting that you pass to a helm chart so the templates will product manifests that you want. Values can be passed one by one, but more commonly they are put on a file calles values.yaml
+**Values and values.yaml** - the setting that you pass to a helm chart so the templates will product manifests that you want. Values can be passed one by one, but more commonly they are put on a file called values.yaml
 
   ```yaml
   global:
@@ -194,6 +194,8 @@ With Helm this entire resource would be automatically defined, just by setting p
   ```
 
 This is a very simple values yaml that would produce a kubernetes minifest file over 200 lines long. 
+
+**release** - When you deploy _something_ with Helm, you provide a name for identification. This name and the resources deployed along with it make up a `release`. It is a common pattern to prefix all of the resources managed by a release with the release name. In our examples we will use `myping` as the release name, so you will see products running with names like: `myping-pingfederate-admin`, `myping-pindirectory`, `myping-pingauthorize`. 
 
 ### Commands
 
@@ -217,12 +219,4 @@ Delete PVCs associated to a release
   ```
   kubectl delete pvc --selector=app.kubernetes.io/instance=<release_name>
   ```
-
-
-
-
-
-
-
-
 
