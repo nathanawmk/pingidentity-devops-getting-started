@@ -41,7 +41,7 @@ A Deployment may define the _amount_ of pods, but each one is defined the exact 
   * Health priority - deploys the first instance and waits for it to be healthy before adding another one. Also, all rolling updates occur to instances one at a time starting with the last one (e.g. myping-pingdirectory-2) first. 
   * Persistent Storage per instance - If persistent storage 
 
-**Service** - A slim LoadBalancer within the cluster. Services provide a single IP put in front of Deployments and Statefulsets to distrubute traffic. Backchannel communication, like PingFederate using PingDirectory as a user store, should always point to a service name/port rather than the individual pods. Services are given FQDNs in a cluster. Within the same namespace, services are accessible by their name (e.g `https://myping-pingdirectory:443`), but accross namespaces you must be more explicit (`https://myping-pingdirectory.<namespace>:443`). An FQDN would be `https://myping-pingdirectory.<namespace>.svc.cluster.local
+**Service** - A slim LoadBalancer within the cluster. Services provide a single IP put in front of Deployments and Statefulsets to distrubute traffic. Backchannel communication, like PingFederate using PingDirectory as a user store, should always point to a service name/port rather than the individual pods. Services are given FQDNs in a cluster. Within the same namespace, services are accessible by their name (e.g `https://myping-pingdirectory:443`), but accross namespaces you must be more explicit (`https://myping-pingdirectory.<namespace>:443`). An FQDN would be `https://myping-pingdirectory.<namespace>.svc.cluster.local`
 
 **Ingress** - A definition used to expose an application outside of the cluster. In order for this to work, you need an Ingress Controller. A common pattern is a deployment of Nginx pods fronted by a physical LoadBalancer. Where client application traffic hits the Loadbalancer is forwarded to Nginx, is evaluated based on the hostname header and path and forwarded to a corresponding application. For example a Pingfederate ingress may have a hostname of myping-pingfederate-engine.ping-local.com. If a client app makes a request to https://myping-pingfederate-engine.ping-local.com/pf/heartbeat.ping the traffic follows like: Client -> LoadBalancer -> NGinx -> pingfederate-engine. More Specifically: Client -> LoadBalancer (Nginx k8s Service) -> Nginx Pod -> Pingfederate-engine k8s Service -> Pingfederate-engine pod. 
 
@@ -102,7 +102,7 @@ See available hostnames by ingress
 
 #### Debugging
 
-When a has crashed surprisingly, we want to first identify why. 
+When a crashes suddenly, we want to first identify why. 
 
 View logs of the crash: 
 
